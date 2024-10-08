@@ -6,7 +6,7 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 15:24:13 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/08 09:22:31 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/08 09:41:39 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putchar(char c)
 }
 
 int	main(int argc, char *argv[])
-{
+	{
 	int	i;
 	int	j;
 
