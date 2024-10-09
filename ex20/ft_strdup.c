@@ -1,35 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/05 15:24:13 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/09 13:51:19 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/10/09 12:44:10 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/10/09 13:21:48 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include <unistd.h>                    //teste
+#include <stdio.h>                    //teste
+void	ft_putchar(char c)           //teste
+{
+	write(1, &c, 1);
+}
 
-void	ft_putchar(char c);
+int	ft_strlen(char *str)
+{
+	int	count;
 
-int	main(int argc, char *argv[])
+	count = 0;
+	while (str[count] != '\0')
 	{
-	int	i;
-	int	j;
-
-	i = 1;
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			ft_putchar(argv[i][j]);
-			j++;
-		}
-		ft_putchar('\n');
-		i++;
+		count++;
 	}
-	return (0);
+	return (count);
+}
+/*
+char	*ft_strdup(char *src)
+{
+	
+}*/
+
+int	main(void)
+{
+	char	potato[] = "aaaaaaaa";
+	
+	printf("%d", ft_strlen(potato));
+
 }
