@@ -6,13 +6,16 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:47:00 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/08 13:55:48 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:14:31 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int	main(int argc, char *argv[])
 {
