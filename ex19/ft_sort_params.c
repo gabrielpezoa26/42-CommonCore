@@ -6,16 +6,13 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:47:00 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/10 11:46:25 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:02:48 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -31,7 +28,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	ft_printg(char *s1)
+void	ft_print(char *s1)
 {
 	int	i;
 
@@ -44,7 +41,7 @@ void	ft_printg(char *s1)
 	ft_putchar('\n');
 }
 
-void	ft_swapg(char **s1, char **s2)
+void	ft_swap(char **s1, char **s2)
 {
 	char	*temp;
 
@@ -66,7 +63,7 @@ int	main(int argc, char *argv[])
 		{
 			if (ft_strcmp(argv[i], argv[j]) > 0)
 			{
-				ft_swapg(&argv[i], &argv[j]);
+				ft_swap(&argv[i], &argv[j]);
 			}
 			i++;
 		}
@@ -75,7 +72,7 @@ int	main(int argc, char *argv[])
 	j = 1;
 	while (j < argc)
 	{
-		ft_printg(argv[j]);
+		ft_print(argv[j]);
 		j++;
 	}
 	return (0);
