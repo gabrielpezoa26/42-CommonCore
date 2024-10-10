@@ -6,7 +6,7 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:44:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/10 12:15:50 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:23:35 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ char	*ft_strdup(char *src)
 	int		i;
 	char	*dest;
 
-	i = 0;
 	dest = (char *)malloc(ft_strlen(src) * sizeof(char));
+	if (dest == NULL)
+		return (NULL);
+	i = 0;
 	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
