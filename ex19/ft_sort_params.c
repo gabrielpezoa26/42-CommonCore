@@ -22,22 +22,15 @@ int	main(int argc, char *argv[])
 	int	i;
 	int	j;
 
-	
-	
-	i = 1;
-	while
-	{	
-		while (i < argc)
+	j = 1;
+	while(argc > j)
+	{
+		i = 1;
+		while(argc > i)
 		{
-			j = 0;
-			while (argv[i][j] != '\0')
-			{
-				ft_putchar(argv[i][j]);
-				j++;
-			}
-			ft_putchar('\n');
+			if (ft_strcmp(argv[i], argv[j]) > 0)
+				ft_swap(&argv[i], &argv[j]);
 			i++;
 		}
-	}
-	return (0);
+	j++;
 }
