@@ -6,13 +6,12 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:44:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/10 11:44:12 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:15:50 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
-#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
