@@ -6,18 +6,13 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:44:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/10 10:15:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/10 11:44:12 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 int	ft_strlen(char *str)
 {
@@ -28,6 +23,7 @@ int	ft_strlen(char *str)
 	{
 		count++;
 	}
+	count = count + 1;
 	return (count);
 }
 
@@ -48,9 +44,9 @@ char	*ft_strdup(char *src)
 /*
 int	main(void)
 {
-	char	potato[] = "aaadssdfsdfsdfsdfaaaaa";
+	char	potato[] = "hello";
 	
-	//printf("%d", ft_strlen(potato));
+
 	printf("%s", ft_strdup(potato));
 	return (0);
 

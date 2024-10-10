@@ -6,7 +6,7 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:47:00 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/10 10:25:46 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/10 11:46:25 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,8 @@ void	ft_printg(char *s1)
 	ft_putchar('\n');
 }
 
-void	ft_swapg(char *s1[], char *s2[])
+void	ft_swapg(char **s1, char **s2)
 {
-	int		i;
-	int		j;
 	char	*temp;
 
 	temp = *s1;
@@ -61,10 +59,10 @@ int	main(int argc, char *argv[])
 	int	j;
 
 	j = 1;
-	while (argc > j)
+	while (j < argc)
 	{
 		i = 1;
-		while (argc > i)
+		while (i < argc)
 		{
 			if (ft_strcmp(argv[i], argv[j]) > 0)
 			{
@@ -75,7 +73,7 @@ int	main(int argc, char *argv[])
 		j++;
 	}
 	j = 1;
-	while (argc > j)
+	while (j < argc)
 	{
 		ft_printg(argv[j]);
 		j++;

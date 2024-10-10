@@ -6,7 +6,7 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:13:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/10 10:29:48 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/10/10 11:28:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	*ft_range(int min, int max)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	int	*potato;
@@ -45,4 +45,4 @@ int	main(void)
 		i++;
 	}
 	return (0);
-}
+}*/
