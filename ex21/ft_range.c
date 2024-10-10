@@ -1,57 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 12:44:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/10/10 10:15:57 by gcesar-n         ###   ########.fr       */
+/*   Created: 2024/10/09 16:13:17 by gcesar-n          #+#    #+#             */
+/*   Updated: 2024/10/10 10:18:15 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <unistd.h>
 #include <stdio.h>
 
-void	ft_putchar(char c)
+int	*ft_range(int min, int max)
 {
-	write(1, &c, 1);
-}
-
-int	ft_strlen(char *str)
-{
-	int	count;
-
-	count = 0;
-	while (str[count] != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-char	*ft_strdup(char *src)
-{
-	int		i;
-	char	*dest;
+	int	i;
+	int	*dest;
 
 	i = 0;
-	dest = (char *)malloc(ft_strlen(src) * sizeof(char));
-	while (src[i] != '\0')
+
+	dest = (int *)malloc((max - min) * sizeof(int));
+	while ((min + i) < max)
 	{
-		dest[i] = src[i];
+		dest[i] = min + i;
 		i++;
 	}
 	return (dest);
 }
-/*
+
 int	main(void)
 {
-	char	potato[] = "aaadssdfsdfsdfsdfaaaaa";
+	int	*potato;
+	int	min;
+	int	max;
+	int	i;
 	
-	//printf("%d", ft_strlen(potato));
-	printf("%s", ft_strdup(potato));
+	min = 1;
+	max = 10;
+
+	i = 0;
+	potato = ft_range(min, max);
+	while (i != (max - min))
+	{
+		printf("%d\n", potato[i]);
+		i++;
+	}
 	return (0);
 
-}*/
+}
